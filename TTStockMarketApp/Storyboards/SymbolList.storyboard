@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tib-lg-YRn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Symbol List-->
+        <scene sceneID="t64-A8-ISQ">
+            <objects>
+                <navigationController id="tib-lg-YRn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Symbol List" image="doc.text.fill" catalog="system" id="ajd-jJ-NO6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lxW-3k-fpd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="P0A-Mb-DB8" kind="relationship" relationship="rootViewController" id="oBb-94-U3b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkM-nN-02N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="145"/>
+        </scene>
+        <!--Symbol List View Controller-->
+        <scene sceneID="5uF-AI-8da">
+            <objects>
+                <viewController storyboardIdentifier="SymbolListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P0A-Mb-DB8" customClass="SymbolListViewController" customModule="TTStockMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0kj-f0-byK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYMBOL LIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-cn-ohr">
+                                <rect key="frame" x="153.5" y="437.5" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WGc-cn-ohr" firstAttribute="centerY" secondItem="0kj-f0-byK" secondAttribute="centerY" id="D1b-XL-IPL"/>
+                            <constraint firstItem="WGc-cn-ohr" firstAttribute="centerX" secondItem="0kj-f0-byK" secondAttribute="centerX" id="QWY-mj-2Cg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zdE-aG-lMq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VeT-QY-56z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zS-iK-X46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="155"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
