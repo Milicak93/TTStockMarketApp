@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6005260248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */; };
 		A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE01F248A95B70077A3C4 /* AppDelegate.swift */; };
 		A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE021248A95B70077A3C4 /* SceneDelegate.swift */; };
 		A64CE029248A95B80077A3C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64CE028248A95B80077A3C4 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Milica_Kostic_2020CV.pdf; sourceTree = "<group>"; };
 		A64CE01C248A95B70077A3C4 /* TTStockMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTStockMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64CE01F248A95B70077A3C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A64CE021248A95B70077A3C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				A64CE042248A964F0077A3C4 /* Storyboards */,
 				A64CE03B248A96330077A3C4 /* Scenes */,
 				A64CE02A248A95B80077A3C4 /* LaunchScreen.storyboard */,
+				A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */,
 				A64CE02D248A95B80077A3C4 /* Info.plist */,
 			);
 			path = TTStockMarketApp;
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64CE041248A964B0077A3C4 /* SymbolList.storyboard in Resources */,
+				A6005260248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf in Resources */,
 				A64CE02C248A95B80077A3C4 /* LaunchScreen.storyboard in Resources */,
 				A64CE029248A95B80077A3C4 /* Assets.xcassets in Resources */,
 				A64CE044248A968D0077A3C4 /* Main.storyboard in Resources */,
