@@ -33,21 +33,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfe-bN-6Rg">
-                                <rect key="frame" x="188" y="437.5" width="38.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urz-7y-MUD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jfe-bN-6Rg" firstAttribute="centerX" secondItem="N5s-vz-Qhe" secondAttribute="centerX" id="UBD-Ay-BqN"/>
-                            <constraint firstItem="jfe-bN-6Rg" firstAttribute="centerY" secondItem="N5s-vz-Qhe" secondAttribute="centerY" id="Wri-Nr-uZK"/>
+                            <constraint firstItem="RCY-oy-HEj" firstAttribute="bottom" secondItem="urz-7y-MUD" secondAttribute="bottom" id="1xB-m2-JY3"/>
+                            <constraint firstItem="RCY-oy-HEj" firstAttribute="trailing" secondItem="urz-7y-MUD" secondAttribute="trailing" id="PUo-ab-6z3"/>
+                            <constraint firstItem="urz-7y-MUD" firstAttribute="top" secondItem="RCY-oy-HEj" secondAttribute="top" id="a95-kh-e8u"/>
+                            <constraint firstItem="urz-7y-MUD" firstAttribute="leading" secondItem="RCY-oy-HEj" secondAttribute="leading" id="y6Z-1l-xBL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RCY-oy-HEj"/>
                     </view>
                     <navigationItem key="navigationItem" id="eMu-Cb-Wk8"/>
+                    <connections>
+                        <outlet property="containerView" destination="urz-7y-MUD" id="8hC-Jc-Htq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6Z-6i-6v6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

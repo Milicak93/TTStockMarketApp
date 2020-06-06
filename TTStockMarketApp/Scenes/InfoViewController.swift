@@ -7,24 +7,47 @@
 //
 
 import UIKit
+import Foundation
+import WebKit
 
-class InfoViewController: UIViewController {
+class InfoViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+    struct Constants {
+        static let SavePdfTitle = "Save"
+    }
 
+    // MARK: - Outlets
+    @IBOutlet weak var containerView: UIView!
+    
+    // MARK: - Properties
+    var url: URL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createPDFUrl()
     }
-    */
+    
+    private func createPDFUrl() {
+        // Fetch pdf url
+        guard let documentURL = Bundle.main.url(forResource: "Milica_Kostic_2020CV", withExtension: "pdf", subdirectory: nil, localization: nil) else { return }
+        let urlRequest = URLRequest(url: documentURL)
+        // Setup WKWebView
+        let preferences = WKPreferences()
+        preferences.javaScriptEnabled = true
+        preferences.javaScriptCanOpenWindowsAutomatically = true
 
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences = preferences
+
+        let webView = WKWebView(frame: view.bounds, configuration: configuration)
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        webView.load(urlRequest)
+        webView.contentMode = .scaleAspectFit
+        self.containerView.addSubview(webView)
+        self.containerView.bringSubviewToFront(webView)
+    }
 }
