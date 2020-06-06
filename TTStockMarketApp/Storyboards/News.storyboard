@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,28 +34,109 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEWS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoU-TS-RWm">
-                                <rect key="frame" x="183" y="437.5" width="48.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3VJ-tx-bql">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsCell" rowHeight="250" id="Tgt-kp-1BE" customClass="NewsTableViewCell" customModule="TTStockMarketApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tgt-kp-1BE" id="hDn-St-vzE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4vh-R7-WEr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="nsk-2N-a73"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="fF9-nw-cTO">
+                                                    <rect key="frame" x="0.0" y="200" width="414" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="LabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-Na-a4R" customClass="GradientView" customModule="TTStockMarketApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="156" width="414" height="44"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-M3-cbq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Hvz-M3-cbq" firstAttribute="leading" secondItem="dgh-Na-a4R" secondAttribute="leading" id="Emn-RR-zGQ"/>
+                                                        <constraint firstItem="Hvz-M3-cbq" firstAttribute="top" secondItem="dgh-Na-a4R" secondAttribute="top" id="ReV-ay-oVL"/>
+                                                        <constraint firstAttribute="height" constant="44" id="Zko-EE-HOJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Hvz-M3-cbq" secondAttribute="bottom" id="e9y-Ep-Myc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Hvz-M3-cbq" secondAttribute="trailing" id="lLD-Dy-hPT"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="gradient" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4vh-R7-WEr" firstAttribute="top" secondItem="hDn-St-vzE" secondAttribute="top" id="4Z3-j2-T3g"/>
+                                                <constraint firstItem="fF9-nw-cTO" firstAttribute="top" secondItem="dgh-Na-a4R" secondAttribute="bottom" id="5ek-tF-gwQ"/>
+                                                <constraint firstItem="4vh-R7-WEr" firstAttribute="leading" secondItem="hDn-St-vzE" secondAttribute="leading" id="5h8-di-Q1X"/>
+                                                <constraint firstItem="fF9-nw-cTO" firstAttribute="leading" secondItem="hDn-St-vzE" secondAttribute="leading" id="C8b-l3-No8"/>
+                                                <constraint firstItem="fF9-nw-cTO" firstAttribute="top" secondItem="4vh-R7-WEr" secondAttribute="bottom" id="Qbc-L9-xZD"/>
+                                                <constraint firstAttribute="bottom" secondItem="fF9-nw-cTO" secondAttribute="bottom" id="XFL-qo-BJO"/>
+                                                <constraint firstAttribute="trailing" secondItem="dgh-Na-a4R" secondAttribute="trailing" id="cYi-CE-JrW"/>
+                                                <constraint firstAttribute="trailing" secondItem="4vh-R7-WEr" secondAttribute="trailing" id="fDE-nA-Ncb"/>
+                                                <constraint firstAttribute="trailing" secondItem="fF9-nw-cTO" secondAttribute="trailing" id="qID-QX-76v"/>
+                                                <constraint firstItem="dgh-Na-a4R" firstAttribute="leading" secondItem="hDn-St-vzE" secondAttribute="leading" id="udS-vf-3FL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="gradientView" destination="dgh-Na-a4R" id="KJN-Jg-y6D"/>
+                                            <outlet property="newsHeadlineLbl" destination="Hvz-M3-cbq" id="dsI-jA-8tn"/>
+                                            <outlet property="newsImage" destination="4vh-R7-WEr" id="Wu5-fQ-DJp"/>
+                                            <outlet property="newsTitleLbl" destination="fF9-nw-cTO" id="GZN-p5-Cxm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tyj-c4-Z5m" id="xSf-I1-gpH"/>
+                                    <outlet property="delegate" destination="tyj-c4-Z5m" id="rj5-fG-6Xn"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="XoU-TS-RWm" firstAttribute="centerY" secondItem="5Zz-L7-nPx" secondAttribute="centerY" id="ASm-Fw-e0q"/>
-                            <constraint firstItem="XoU-TS-RWm" firstAttribute="centerX" secondItem="5Zz-L7-nPx" secondAttribute="centerX" id="u2Q-dj-FbR"/>
+                            <constraint firstItem="abG-e4-dnL" firstAttribute="trailing" secondItem="3VJ-tx-bql" secondAttribute="trailing" id="0V6-JS-Wie"/>
+                            <constraint firstItem="3VJ-tx-bql" firstAttribute="top" secondItem="abG-e4-dnL" secondAttribute="top" id="6qM-0R-Gtb"/>
+                            <constraint firstItem="abG-e4-dnL" firstAttribute="bottom" secondItem="3VJ-tx-bql" secondAttribute="bottom" id="Bgb-Ru-EY0"/>
+                            <constraint firstItem="3VJ-tx-bql" firstAttribute="leading" secondItem="abG-e4-dnL" secondAttribute="leading" id="h3e-Br-df6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="abG-e4-dnL"/>
                     </view>
                     <navigationItem key="navigationItem" id="aAi-gl-3N3"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="3VJ-tx-bql" id="lBL-EC-dYO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVv-YJ-MSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="159"/>
+            <point key="canvasLocation" x="373.91304347826087" y="158.70535714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="globe" catalog="system" width="128" height="121"/>
+        <namedColor name="LabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

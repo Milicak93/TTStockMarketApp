@@ -11,6 +11,10 @@
 		A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */; };
 		A6005264248BAFCE0029EE94 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005263248BAFCE0029EE94 /* Symbol.swift */; };
 		A6005267248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005266248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift */; };
+		A62C1E10248C01CC007300A9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C1E0F248C01CC007300A9 /* News.swift */; };
+		A62C1E12248C02D9007300A9 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C1E11248C02D9007300A9 /* NewsTableViewCell.swift */; };
+		A62C1E16248C14AC007300A9 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C1E15248C14AC007300A9 /* UIExtensions.swift */; };
+		A62C1E18248C1A87007300A9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62C1E17248C1A87007300A9 /* GradientView.swift */; };
 		A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE01F248A95B70077A3C4 /* AppDelegate.swift */; };
 		A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE021248A95B70077A3C4 /* SceneDelegate.swift */; };
 		A64CE029248A95B80077A3C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64CE028248A95B80077A3C4 /* Assets.xcassets */; };
@@ -29,6 +33,10 @@
 		A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListCollectionViewController.swift; sourceTree = "<group>"; };
 		A6005263248BAFCE0029EE94 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		A6005266248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		A62C1E0F248C01CC007300A9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		A62C1E11248C02D9007300A9 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		A62C1E15248C14AC007300A9 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		A62C1E17248C1A87007300A9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A64CE01C248A95B70077A3C4 /* TTStockMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTStockMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64CE01F248A95B70077A3C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A64CE021248A95B70077A3C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				A6005263248BAFCE0029EE94 /* Symbol.swift */,
+				A62C1E0F248C01CC007300A9 /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -67,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				A6005266248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift */,
+				A62C1E11248C02D9007300A9 /* NewsTableViewCell.swift */,
+				A62C1E17248C1A87007300A9 /* GradientView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -100,6 +111,7 @@
 				A64CE02A248A95B80077A3C4 /* LaunchScreen.storyboard */,
 				A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */,
 				A64CE02D248A95B80077A3C4 /* Info.plist */,
+				A62C1E15248C14AC007300A9 /* UIExtensions.swift */,
 			);
 			path = TTStockMarketApp;
 			sourceTree = "<group>";
@@ -203,7 +215,11 @@
 			files = (
 				A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */,
 				A64CE039248A962A0077A3C4 /* MainTabBarController.swift in Sources */,
+				A62C1E18248C1A87007300A9 /* GradientView.swift in Sources */,
+				A62C1E12248C02D9007300A9 /* NewsTableViewCell.swift in Sources */,
 				A6005267248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift in Sources */,
+				A62C1E10248C01CC007300A9 /* News.swift in Sources */,
+				A62C1E16248C14AC007300A9 /* UIExtensions.swift in Sources */,
 				A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */,
 				A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */,
 				A6005264248BAFCE0029EE94 /* Symbol.swift in Sources */,

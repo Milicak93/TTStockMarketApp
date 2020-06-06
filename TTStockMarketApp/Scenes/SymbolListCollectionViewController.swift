@@ -50,7 +50,7 @@ class SymbolListCollectionViewController: UICollectionViewController {
 
     }
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -70,6 +70,7 @@ class SymbolListCollectionViewController: UICollectionViewController {
     }
 }
 
+// MARK - XMLParserDelegate
 extension SymbolListCollectionViewController: XMLParserDelegate {
     func fetchSymbolList() {
         // credentials encoded in base64
@@ -77,17 +78,17 @@ extension SymbolListCollectionViewController: XMLParserDelegate {
         let password = Constants.Request.Password
         let loginData = String(format: "%@:%@", username, password).data(using: String.Encoding.utf8)!
         let base64LoginData = loginData.base64EncodedString()
-        
+
         // create the request
         guard let url = URL(string: Constants.Request.RequestPath) else { assertionFailure("Couldn't create URL"); return }
         var request = URLRequest(url: url)
         request.httpMethod = Constants.Request.RequestMethod
         request.setValue("Basic \(base64LoginData)", forHTTPHeaderField: "Authorization")
-        
+
         //making the request
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else { assertionFailure("Found an error!"); return }
-            
+
             if let httpStatus = response as? HTTPURLResponse {
                 // check status code returned by the http server
                 print("status code = \(httpStatus.statusCode)")
@@ -96,8 +97,7 @@ extension SymbolListCollectionViewController: XMLParserDelegate {
                 parser.delegate = self
                 parser.parse()
             }
-        }
-        task.resume()
+        }.resume()
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {

@@ -3,4 +3,54 @@
    uuid = "29164719-5BFD-4E88-B1E5-CEF6C8C540A5"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "156231D6-CB30-4E8E-AE8C-7ECE2BFE33B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTStockMarketApp/Scenes/NewsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "parser(_:didEndElement:namespaceURI:qualifiedName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "156231D6-CB30-4E8E-AE8C-7ECE2BFE33B7 - 9cfea31e4071e950"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TTStockMarketApp.NewsViewController.parser(_: __C.NSXMLParser, didEndElement: Swift.String, namespaceURI: Swift.Optional&lt;Swift.String&gt;, qualifiedName: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "TTStockMarketApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/milicakostic/Desktop/TTStockMarketApp/TTStockMarketApp/Scenes/NewsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "701">
+               </Location>
+               <Location
+                  uuid = "156231D6-CB30-4E8E-AE8C-7ECE2BFE33B7 - 54a9620e5a510939"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in TTStockMarketApp.NewsViewController.parser(_: __C.NSXMLParser, didEndElement: Swift.String, namespaceURI: Swift.Optional&lt;Swift.String&gt;, qualifiedName: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "TTStockMarketApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/milicakostic/Desktop/TTStockMarketApp/TTStockMarketApp/Scenes/NewsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
