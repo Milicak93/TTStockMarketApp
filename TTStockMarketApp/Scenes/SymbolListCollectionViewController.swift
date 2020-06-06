@@ -11,7 +11,6 @@ import UIKit
 class SymbolListCollectionViewController: UICollectionViewController {
     struct Constants {
         static let SymbolCellIdentifier = "SymbolCell"
-        static let CellInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
         struct Request {
             static let Username = "android_tt"
             static let Password = "Sk3M!@p9e"
@@ -49,13 +48,6 @@ class SymbolListCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        setupCollectionView()
-        // Do any additional setup after loading the view.
-    }
-    
-    //MARK: - Helper methods
-    private func setupCollectionView() {
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Constants.SymbolCellIdentifier)
     }
 
     // MARK: UICollectionViewDataSource
@@ -68,10 +60,12 @@ class SymbolListCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.SymbolCellIdentifier, for: indexPath)
-    
-        // Configure the cell
-        cell.backgroundColor = .blue
+        guard
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.SymbolCellIdentifier, for: indexPath) as? SymbolCellCollectionViewCell,
+            !symbolList.isEmpty
+        else { return UICollectionViewCell() }
+        cell.populateCell(with: symbolList[indexPath.row])
+            
         return cell
     }
 }

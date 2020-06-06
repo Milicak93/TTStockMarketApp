@@ -10,6 +10,7 @@
 		A6005260248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */; };
 		A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */; };
 		A6005264248BAFCE0029EE94 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005263248BAFCE0029EE94 /* Symbol.swift */; };
+		A6005267248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005266248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift */; };
 		A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE01F248A95B70077A3C4 /* AppDelegate.swift */; };
 		A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE021248A95B70077A3C4 /* SceneDelegate.swift */; };
 		A64CE029248A95B80077A3C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64CE028248A95B80077A3C4 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Milica_Kostic_2020CV.pdf; sourceTree = "<group>"; };
 		A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListCollectionViewController.swift; sourceTree = "<group>"; };
 		A6005263248BAFCE0029EE94 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		A6005266248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A64CE01C248A95B70077A3C4 /* TTStockMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTStockMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64CE01F248A95B70077A3C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A64CE021248A95B70077A3C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A6005268248BDAE30029EE94 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A6005266248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		A64CE013248A95B70077A3C4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 				A64CE028248A95B80077A3C4 /* Assets.xcassets */,
 				A64CE042248A964F0077A3C4 /* Storyboards */,
 				A64CE03B248A96330077A3C4 /* Scenes */,
+				A6005268248BDAE30029EE94 /* CustomViews */,
 				A6005265248BAFD60029EE94 /* Models */,
 				A64CE02A248A95B80077A3C4 /* LaunchScreen.storyboard */,
 				A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */,
@@ -192,6 +203,7 @@
 			files = (
 				A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */,
 				A64CE039248A962A0077A3C4 /* MainTabBarController.swift in Sources */,
+				A6005267248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift in Sources */,
 				A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */,
 				A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */,
 				A6005264248BAFCE0029EE94 /* Symbol.swift in Sources */,
