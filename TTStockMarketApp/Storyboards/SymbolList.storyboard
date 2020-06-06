@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,40 +18,47 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="P0A-Mb-DB8" kind="relationship" relationship="rootViewController" id="oBb-94-U3b"/>
+                        <segue destination="r0N-cK-gL5" kind="relationship" relationship="rootViewController" id="LWy-oT-pVP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkM-nN-02N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-594" y="145"/>
         </scene>
-        <!--Symbol List View Controller-->
-        <scene sceneID="5uF-AI-8da">
+        <!--Symbol List Collection View Controller-->
+        <scene sceneID="RbS-c3-Nai">
             <objects>
-                <viewController storyboardIdentifier="SymbolListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P0A-Mb-DB8" customClass="SymbolListViewController" customModule="TTStockMarketApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0kj-f0-byK">
+                <collectionViewController id="r0N-cK-gL5" customClass="SymbolListCollectionViewController" customModule="TTStockMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eBr-QQ-5bz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYMBOL LIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-cn-ohr">
-                                <rect key="frame" x="153.5" y="437.5" width="107" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="WGc-cn-ohr" firstAttribute="centerY" secondItem="0kj-f0-byK" secondAttribute="centerY" id="D1b-XL-IPL"/>
-                            <constraint firstItem="WGc-cn-ohr" firstAttribute="centerX" secondItem="0kj-f0-byK" secondAttribute="centerX" id="QWY-mj-2Cg"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="zdE-aG-lMq"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="VeT-QY-56z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3zS-iK-X46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TmO-LZ-t6S">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SymbolCell" id="2Nu-Jh-GuD">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KnR-p3-YWp">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="r0N-cK-gL5" id="RrJ-j1-MbN"/>
+                            <outlet property="delegate" destination="r0N-cK-gL5" id="9Cd-RP-dwO"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="gGM-5k-j5O"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDd-Yx-Jxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="322" y="155"/>
+            <point key="canvasLocation" x="455" y="142"/>
         </scene>
     </scenes>
     <resources>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A6005260248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */; };
+		A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */; };
+		A6005264248BAFCE0029EE94 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6005263248BAFCE0029EE94 /* Symbol.swift */; };
 		A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE01F248A95B70077A3C4 /* AppDelegate.swift */; };
 		A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE021248A95B70077A3C4 /* SceneDelegate.swift */; };
 		A64CE029248A95B80077A3C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64CE028248A95B80077A3C4 /* Assets.xcassets */; };
@@ -15,7 +17,6 @@
 		A64CE037248A962A0077A3C4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE033248A962A0077A3C4 /* NewsViewController.swift */; };
 		A64CE038248A962A0077A3C4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE034248A962A0077A3C4 /* InfoViewController.swift */; };
 		A64CE039248A962A0077A3C4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE035248A962A0077A3C4 /* MainTabBarController.swift */; };
-		A64CE03A248A962A0077A3C4 /* SymbolListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64CE036248A962A0077A3C4 /* SymbolListViewController.swift */; };
 		A64CE03F248A964B0077A3C4 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64CE03C248A964A0077A3C4 /* Info.storyboard */; };
 		A64CE040248A964B0077A3C4 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64CE03D248A964A0077A3C4 /* News.storyboard */; };
 		A64CE041248A964B0077A3C4 /* SymbolList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64CE03E248A964B0077A3C4 /* SymbolList.storyboard */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Milica_Kostic_2020CV.pdf; sourceTree = "<group>"; };
+		A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolListCollectionViewController.swift; sourceTree = "<group>"; };
+		A6005263248BAFCE0029EE94 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		A64CE01C248A95B70077A3C4 /* TTStockMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTStockMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64CE01F248A95B70077A3C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A64CE021248A95B70077A3C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +36,6 @@
 		A64CE033248A962A0077A3C4 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A64CE034248A962A0077A3C4 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A64CE035248A962A0077A3C4 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		A64CE036248A962A0077A3C4 /* SymbolListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolListViewController.swift; sourceTree = "<group>"; };
 		A64CE03C248A964A0077A3C4 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		A64CE03D248A964A0077A3C4 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		A64CE03E248A964B0077A3C4 /* SymbolList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SymbolList.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6005265248BAFD60029EE94 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6005263248BAFCE0029EE94 /* Symbol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A64CE013248A95B70077A3C4 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 				A64CE028248A95B80077A3C4 /* Assets.xcassets */,
 				A64CE042248A964F0077A3C4 /* Storyboards */,
 				A64CE03B248A96330077A3C4 /* Scenes */,
+				A6005265248BAFD60029EE94 /* Models */,
 				A64CE02A248A95B80077A3C4 /* LaunchScreen.storyboard */,
 				A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */,
 				A64CE02D248A95B80077A3C4 /* Info.plist */,
@@ -88,7 +99,7 @@
 				A64CE034248A962A0077A3C4 /* InfoViewController.swift */,
 				A64CE035248A962A0077A3C4 /* MainTabBarController.swift */,
 				A64CE033248A962A0077A3C4 /* NewsViewController.swift */,
-				A64CE036248A962A0077A3C4 /* SymbolListViewController.swift */,
+				A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -181,10 +192,11 @@
 			files = (
 				A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */,
 				A64CE039248A962A0077A3C4 /* MainTabBarController.swift in Sources */,
+				A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */,
 				A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */,
+				A6005264248BAFCE0029EE94 /* Symbol.swift in Sources */,
 				A64CE037248A962A0077A3C4 /* NewsViewController.swift in Sources */,
 				A64CE038248A962A0077A3C4 /* InfoViewController.swift in Sources */,
-				A64CE03A248A962A0077A3C4 /* SymbolListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
