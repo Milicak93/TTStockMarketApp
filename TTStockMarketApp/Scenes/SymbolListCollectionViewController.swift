@@ -11,6 +11,7 @@ import UIKit
 class SymbolListCollectionViewController: UICollectionViewController {
     struct Constants {
         static let SymbolCellIdentifier = "SymbolCell"
+        static let ShowSymbolDetailsSegue = "showSymbolDetails"
         struct Request {
             static let Username = "android_tt"
             static let Password = "Sk3M!@p9e"
@@ -21,6 +22,7 @@ class SymbolListCollectionViewController: UICollectionViewController {
     
     // MARK: - Properties
     var symbolList: [Symbol] = []
+    var selectedSymbol: Symbol?
     
     // MARK: - Helper properties
     // Symbol properties
@@ -67,6 +69,11 @@ class SymbolListCollectionViewController: UICollectionViewController {
         cell.populateCell(with: symbolList[indexPath.row])
             
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedSymbol = symbolList[indexPath.row]
+        presentSymbolDetails()
     }
 }
 
@@ -152,5 +159,21 @@ extension SymbolListCollectionViewController: XMLParserDelegate {
                 self.collectionView.reloadData()
             }
         }
+    }
+}
+
+extension SymbolListCollectionViewController {
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if
+            segue.identifier == Constants.ShowSymbolDetailsSegue,
+            let symbolDetailsVC = segue.destination as? SymbolDetailsTableViewController {
+            symbolDetailsVC.selectedSymbol = selectedSymbol
+        }
+    }
+    
+    func presentSymbolDetails() {
+        self.performSegue(withIdentifier: Constants.ShowSymbolDetailsSegue, sender: nil)
     }
 }
