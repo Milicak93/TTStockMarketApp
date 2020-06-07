@@ -12,44 +12,36 @@ class SymbolListCollectionViewController: UICollectionViewController {
     struct Constants {
         static let SymbolCellIdentifier = "SymbolCell"
         static let ShowSymbolDetailsSegue = "showSymbolDetails"
-        struct Request {
-            static let Username = "android_tt"
-            static let Password = "Sk3M!@p9e"
-            static let RequestMethod = "GET"
-            static let RequestPath = "http://www.teletrader.rs/downloads/tt_symbol_list.xml"
-        }
     }
     
     // MARK: - Properties
     var symbolList: [Symbol] = []
     var selectedSymbol: Symbol?
     
-    // MARK: - Helper properties
     // Symbol properties
-    var id = ""
-    var name = ""
-    var tickerSymbol = ""
-    var isin = ""
-    var currency = ""
-    var stockExchangeName = ""
-    var decorativeName = ""
+    fileprivate var id = ""
+    fileprivate var name = ""
+    fileprivate var tickerSymbol = ""
+    fileprivate var isin = ""
+    fileprivate var currency = ""
+    fileprivate var stockExchangeName = ""
+    fileprivate var decorativeName = ""
     // Quote properties
-    var last = ""
-    var high = ""
-    var low = ""
-    var bid = ""
-    var ask = ""
-    var volume = ""
-    var dateTime = ""
-    var change = ""
-    var changePercent = ""
+    fileprivate var last = ""
+    fileprivate var high = ""
+    fileprivate var low = ""
+    fileprivate var bid = ""
+    fileprivate var ask = ""
+    fileprivate var volume = ""
+    fileprivate var dateTime = ""
+    fileprivate var change = ""
+    fileprivate var changePercent = ""
+    
+    // MARK: - Helper properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchSymbolList()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        NetworkManager.shared.getSymbols(xmlParserDelegate: self)
     }
 
     // MARK: - UICollectionViewDataSource
@@ -77,36 +69,7 @@ class SymbolListCollectionViewController: UICollectionViewController {
     }
 }
 
-// MARK - XMLParserDelegate
 extension SymbolListCollectionViewController: XMLParserDelegate {
-    func fetchSymbolList() {
-        // credentials encoded in base64
-        let username = Constants.Request.Username
-        let password = Constants.Request.Password
-        let loginData = String(format: "%@:%@", username, password).data(using: String.Encoding.utf8)!
-        let base64LoginData = loginData.base64EncodedString()
-
-        // create the request
-        guard let url = URL(string: Constants.Request.RequestPath) else { assertionFailure("Couldn't create URL"); return }
-        var request = URLRequest(url: url)
-        request.httpMethod = Constants.Request.RequestMethod
-        request.setValue("Basic \(base64LoginData)", forHTTPHeaderField: "Authorization")
-
-        //making the request
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else { assertionFailure("Found an error!"); return }
-
-            if let httpStatus = response as? HTTPURLResponse {
-                // check status code returned by the http server
-                print("status code = \(httpStatus.statusCode)")
-                // process result
-                let parser = XMLParser(data: data)
-                parser.delegate = self
-                parser.parse()
-            }
-        }.resume()
-    }
-    
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         guard elementName == "Symbol" || elementName == "Quote" else { return }
         
@@ -164,7 +127,6 @@ extension SymbolListCollectionViewController: XMLParserDelegate {
 
 extension SymbolListCollectionViewController {
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
             segue.identifier == Constants.ShowSymbolDetailsSegue,
