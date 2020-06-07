@@ -30,6 +30,8 @@
 		A6B7707D248CFCC80008275A /* SymbolDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7707C248CFCC80008275A /* SymbolDetailTableViewCell.swift */; };
 		A6B7707F248D09140008275A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7707E248D09140008275A /* Util.swift */; };
 		A6B77082248D184F0008275A /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77081248D184F0008275A /* NewsDetailsViewController.swift */; };
+		A6B77084248D32BE0008275A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77083248D32BE0008275A /* NetworkManager.swift */; };
+		A6B77086248D41680008275A /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77085248D41680008275A /* PersistanceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		A6B7707C248CFCC80008275A /* SymbolDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A6B7707E248D09140008275A /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A6B77081248D184F0008275A /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsDetailsViewController.swift; path = TTStockMarketApp/Scenes/NewsDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
+		A6B77083248D32BE0008275A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A6B77085248D41680008275A /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				A64CE02A248A95B80077A3C4 /* LaunchScreen.storyboard */,
 				A600525F248AC2E50029EE94 /* Milica_Kostic_2020CV.pdf */,
 				A64CE02D248A95B80077A3C4 /* Info.plist */,
+				A6B77083248D32BE0008275A /* NetworkManager.swift */,
+				A6B77085248D41680008275A /* PersistanceManager.swift */,
 			);
 			path = TTStockMarketApp;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */,
 				A64CE039248A962A0077A3C4 /* MainTabBarController.swift in Sources */,
 				A6B7707D248CFCC80008275A /* SymbolDetailTableViewCell.swift in Sources */,
+				A6B77086248D41680008275A /* PersistanceManager.swift in Sources */,
 				A62C1E18248C1A87007300A9 /* GradientView.swift in Sources */,
 				A62C1E12248C02D9007300A9 /* NewsTableViewCell.swift in Sources */,
 				A6005267248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift in Sources */,
@@ -243,6 +250,7 @@
 				A6B7707F248D09140008275A /* Util.swift in Sources */,
 				A62C1E16248C14AC007300A9 /* UIExtensions.swift in Sources */,
 				A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */,
+				A6B77084248D32BE0008275A /* NetworkManager.swift in Sources */,
 				A6B77077248CF7AD0008275A /* SymbolDetailsTableViewController.swift in Sources */,
 				A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */,
 				A6B77082248D184F0008275A /* NewsDetailsViewController.swift in Sources */,

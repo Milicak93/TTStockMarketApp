@@ -12,19 +12,12 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = 0
-        // Do any additional setup after loading the view.
+        self.selectedIndex = PersistanceManager.shared.lastSelectedIndex.rawValue
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        guard let selectedIndex = tabBar.items?.firstIndex(of: item) else { return }
+        PersistanceManager.shared.lastSelectedIndex = SelectedTab(rawValue: selectedIndex) ?? .symbolList
     }
-    */
 
 }

@@ -13,12 +13,6 @@ class NewsViewController: UIViewController {
     struct Constants {
         static let NewsCellIdentifier = "NewsCell"
         static let NewsDetailsSegueIdentifier = "showNewsDetails"
-        struct Request {
-            static let RequestPath = "http://www.teletrader.rs/downloads/tt_news_list.xml"
-            static let Username = "android_tt"
-            static let Password = "Sk3M!@p9e"
-            static let RequestMethod = "Get"
-        }
     }
     
     // MARK: - Outlets
@@ -29,18 +23,18 @@ class NewsViewController: UIViewController {
     var selectedNews: News?
     
     // MARK: - Helper properties
-    var id: String = ""
-    var author: String = ""
-    var dateTime: String = ""
-    var sourceName: String = ""
-    var headline: String = ""
-    var imageId: Int = 0
-    var didEnterTag: Bool = false
-    var currentlyReadValue: String = ""
+    fileprivate var id: String = ""
+    fileprivate var author: String = ""
+    fileprivate var dateTime: String = ""
+    fileprivate var sourceName: String = ""
+    fileprivate var headline: String = ""
+    fileprivate var imageId: Int = 0
+    fileprivate var didEnterTag: Bool = false
+    fileprivate var currentlyReadValue: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchNewsList()
+        NetworkManager.shared.getNews(xmlParserDelegate: self)
     }
 }
 
@@ -63,33 +57,6 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - XMLParserDelegate
 extension NewsViewController: XMLParserDelegate {
-    func fetchNewsList() {
-        // credentials encoded in base64
-        let username = Constants.Request.Username
-        let password = Constants.Request.Password
-        let loginData = String(format: "%@:%@", username, password).data(using: String.Encoding.utf8)!
-        let base64LoginData = loginData.base64EncodedString()
-
-        // create the request
-        guard let url = URL(string: Constants.Request.RequestPath) else { assertionFailure("Couldn't create URL"); return }
-        var request = URLRequest(url: url)
-        request.httpMethod = Constants.Request.RequestMethod
-        request.setValue("Basic \(base64LoginData)", forHTTPHeaderField: "Authorization")
-
-        //making the request
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else { assertionFailure("Found an error!"); return }
-
-            if let httpStatus = response as? HTTPURLResponse {
-                // check status code returned by the http server
-                print("status code = \(httpStatus.statusCode)")
-                // process result
-                let parser = XMLParser(data: data)
-                parser.delegate = self
-                parser.parse()
-            }
-        }.resume()
-    }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         if elementName == "NewsArticle" {
