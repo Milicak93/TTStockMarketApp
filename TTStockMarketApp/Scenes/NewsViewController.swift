@@ -12,6 +12,7 @@ class NewsViewController: UIViewController {
     // MARK: - Constants
     struct Constants {
         static let NewsCellIdentifier = "NewsCell"
+        static let NewsDetailsSegueIdentifier = "showNewsDetails"
         struct Request {
             static let RequestPath = "http://www.teletrader.rs/downloads/tt_news_list.xml"
             static let Username = "android_tt"
@@ -25,6 +26,7 @@ class NewsViewController: UIViewController {
     
     // MARK: Properties
     var newsList: [News] = []
+    var selectedNews: News?
     
     // MARK: - Helper properties
     var id: String = ""
@@ -51,6 +53,11 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.NewsCellIdentifier, for: indexPath) as? NewsTableViewCell else { return UITableViewCell() }
         cell.populate(with: newsList[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedNews = newsList[indexPath.row]
+        presentNewsDetails()
     }
 }
 
@@ -124,5 +131,21 @@ extension NewsViewController: XMLParserDelegate {
             didEnterTag = false
             currentlyReadValue = ""
         }
+    }
+}
+
+// MARK: - Navigation
+
+extension NewsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if
+            segue.identifier == Constants.NewsDetailsSegueIdentifier,
+            let newsDetailsVC = segue.destination as? NewsDetailsViewController {
+            newsDetailsVC.selectedNews = selectedNews
+        }
+    }
+    
+    func presentNewsDetails() {
+        performSegue(withIdentifier: Constants.NewsDetailsSegueIdentifier, sender: nil)
     }
 }
