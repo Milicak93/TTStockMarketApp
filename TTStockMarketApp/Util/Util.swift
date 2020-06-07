@@ -6,7 +6,7 @@
 //  Copyright © 2020 Milica Kostic. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol PropertyLoopable {
     func allProperties() throws -> [String: Any]
@@ -23,5 +23,25 @@ extension PropertyLoopable {
             result[property] = value
         }
         return result
+    }
+}
+
+
+protocol CustomizeFontColorProtocol {
+    func fontColorBasedOnSymbolChange(change value: String) -> UIColor
+}
+
+extension CustomizeFontColorProtocol {
+
+    func fontColorBasedOnSymbolChange(change value: String) -> UIColor {
+        let changeValue = Float(value) ?? TTStockMarketConstants.SymbolChangeLimit
+        switch changeValue {
+        case _ where changeValue < TTStockMarketConstants.SymbolChangeLimit:
+            return TTStockMarketConstants.RedColor ?? .red
+        case _ where changeValue > TTStockMarketConstants.SymbolChangeLimit:
+            return TTStockMarketConstants.GreenColor ?? .green
+        default:
+            return TTStockMarketConstants.GreyColor ?? .gray
+        }
     }
 }

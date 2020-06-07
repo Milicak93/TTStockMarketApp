@@ -12,7 +12,8 @@ import WebKit
 
 class InfoViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     struct Constants {
-        static let SavePdfTitle = "Save"
+        static let PDFFileExtension = "pdf"
+        static let ResourceFile = "Milica_Kostic_2020CV"
     }
 
     // MARK: - Outlets
@@ -32,7 +33,7 @@ class InfoViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     private func createPDFUrl() {
         // Fetch pdf url
-        guard let documentURL = Bundle.main.url(forResource: "Milica_Kostic_2020CV", withExtension: "pdf", subdirectory: nil, localization: nil) else { return }
+        guard let documentURL = Bundle.main.url(forResource: Constants.ResourceFile, withExtension: Constants.PDFFileExtension, subdirectory: nil, localization: nil) else { return }
         let urlRequest = URLRequest(url: documentURL)
         // Setup WKWebView
         let preferences = WKPreferences()

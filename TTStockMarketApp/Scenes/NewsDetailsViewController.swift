@@ -37,7 +37,7 @@ class NewsDetailsViewController: UIViewController {
     
     func downloadImage() {
         guard let news = selectedNews else { return }
-        var formatUrl: String = ""
+        var formatUrl: String = .empty
         if UIDevice.current.orientation.isPortrait {
             formatUrl = String(format: Constants.ImageUrl, news.imageId, Constants.PortraitImagePresets)
         } else if UIDevice.current.orientation.isLandscape {
