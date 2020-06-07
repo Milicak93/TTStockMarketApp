@@ -103,10 +103,103 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="gGM-5k-j5O"/>
+                    <connections>
+                        <segue destination="E9a-lR-uaB" kind="show" identifier="showSymbolDetails" id="sLG-B8-IfK"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDd-Yx-Jxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453.62318840579712" y="141.96428571428569"/>
+        </scene>
+        <!--Symbol Details Table View Controller-->
+        <scene sceneID="959-8d-mnY">
+            <objects>
+                <tableViewController id="E9a-lR-uaB" customClass="SymbolDetailsTableViewController" customModule="TTStockMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="y2G-dg-k3Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="uF1-Rg-6tx">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKW-0Y-Z3f">
+                                    <rect key="frame" x="16" y="8" width="382" height="71"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJo-uV-AoD">
+                                    <rect key="frame" x="8" y="87" width="390" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="fKW-0Y-Z3f" firstAttribute="top" secondItem="uF1-Rg-6tx" secondAttribute="top" constant="8" id="FBu-GS-CxF"/>
+                                <constraint firstItem="FJo-uV-AoD" firstAttribute="top" secondItem="fKW-0Y-Z3f" secondAttribute="bottom" constant="8" id="Fa2-Lo-VuR"/>
+                                <constraint firstAttribute="trailing" secondItem="fKW-0Y-Z3f" secondAttribute="trailing" constant="16" id="Hq0-Jo-4NR"/>
+                                <constraint firstAttribute="bottom" secondItem="FJo-uV-AoD" secondAttribute="bottom" constant="8" id="Row-NL-IkB"/>
+                                <constraint firstAttribute="trailing" secondItem="FJo-uV-AoD" secondAttribute="trailing" constant="16" id="eXu-0C-7y0"/>
+                                <constraint firstItem="fKW-0Y-Z3f" firstAttribute="leading" secondItem="uF1-Rg-6tx" secondAttribute="leading" constant="16" id="fv8-md-He6"/>
+                                <constraint firstItem="FJo-uV-AoD" firstAttribute="leading" secondItem="uF1-Rg-6tx" secondAttribute="leading" constant="8" id="vIv-8g-pcu"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SymbolDetailCell" rowHeight="44" id="jwS-Rz-jSX" customClass="SymbolDetailTableViewCell" customModule="TTStockMarketApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="144" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwS-Rz-jSX" id="5pb-Lq-0kl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticker Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n95-ba-iQF">
+                                            <rect key="frame" x="16" y="8" width="106" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Tk-tX-Kok">
+                                            <rect key="frame" x="130" y="8" width="268" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="1Tk-tX-Kok" secondAttribute="trailing" constant="16" id="4KP-gZ-9m2"/>
+                                        <constraint firstItem="1Tk-tX-Kok" firstAttribute="top" secondItem="5pb-Lq-0kl" secondAttribute="top" constant="8" id="Ewa-Up-NQX"/>
+                                        <constraint firstItem="n95-ba-iQF" firstAttribute="leading" secondItem="5pb-Lq-0kl" secondAttribute="leading" constant="16" id="K4P-2r-Ick"/>
+                                        <constraint firstAttribute="bottom" secondItem="1Tk-tX-Kok" secondAttribute="bottom" constant="8" id="RNK-HA-4R5"/>
+                                        <constraint firstItem="n95-ba-iQF" firstAttribute="top" secondItem="5pb-Lq-0kl" secondAttribute="top" constant="8" id="nKG-Cp-zzd"/>
+                                        <constraint firstItem="1Tk-tX-Kok" firstAttribute="leading" secondItem="n95-ba-iQF" secondAttribute="trailing" constant="8" id="p2l-1Z-RHH"/>
+                                        <constraint firstAttribute="bottom" secondItem="n95-ba-iQF" secondAttribute="bottom" constant="8" id="vq3-Xw-7RQ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="property" destination="n95-ba-iQF" id="APL-TQ-zbF"/>
+                                    <outlet property="propertyValue" destination="1Tk-tX-Kok" id="YWb-jx-cqx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="E9a-lR-uaB" id="eib-Gv-dIg"/>
+                            <outlet property="delegate" destination="E9a-lR-uaB" id="JFY-ip-iAS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ui3-Uh-Tev"/>
+                    <connections>
+                        <outlet property="dateTimeLbl" destination="FJo-uV-AoD" id="qCb-fk-pJI"/>
+                        <outlet property="symbolDetailsHeaderView" destination="uF1-Rg-6tx" id="eVr-N2-Y9j"/>
+                        <outlet property="symbolNameLbl" destination="fKW-0Y-Z3f" id="l1s-3L-FuA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vg9-vp-n4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="135.9375"/>
         </scene>
     </scenes>
     <resources>
