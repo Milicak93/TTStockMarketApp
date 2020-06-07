@@ -23,14 +23,14 @@ class NewsViewController: UIViewController {
     var selectedNews: News?
     
     // MARK: - Helper properties
-    fileprivate var id: String = ""
-    fileprivate var author: String = ""
-    fileprivate var dateTime: String = ""
-    fileprivate var sourceName: String = ""
-    fileprivate var headline: String = ""
+    fileprivate var id: String = .empty
+    fileprivate var author: String = .empty
+    fileprivate var dateTime: String = .empty
+    fileprivate var sourceName: String = .empty
+    fileprivate var headline: String = .empty
     fileprivate var imageId: Int = 0
     fileprivate var didEnterTag: Bool = false
-    fileprivate var currentlyReadValue: String = ""
+    fileprivate var currentlyReadValue: String = .empty
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,16 +59,16 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
 extension NewsViewController: XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        if elementName == "NewsArticle" {
-            id = attributeDict["id"] ?? ""
-            author = attributeDict["author"] ?? ""
-            dateTime = attributeDict["dateTime"] ?? ""
-            sourceName = attributeDict["sourceName"] ?? ""
+        if elementName == TTStockMarketConstants.NewsArticeXMLTag {
+            id = attributeDict["id"] ?? .missingInfoPlaceholder
+            author = attributeDict["author"] ?? .missingInfoPlaceholder
+            dateTime = attributeDict["dateTime"] ?? .missingInfoPlaceholder
+            sourceName = attributeDict["sourceName"] ?? .missingInfoPlaceholder
         }
-        if elementName == "Headline" {
+        if elementName == TTStockMarketConstants.HeadlineXMLTag {
             didEnterTag = true
         }
-        if elementName == "ImageID" {
+        if elementName == TTStockMarketConstants.ImageIdXMLTag {
             didEnterTag = true
         }
     }
@@ -80,23 +80,23 @@ extension NewsViewController: XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "Result" {
+        if elementName == TTStockMarketConstants.StartAndEndXMLTag {
             DispatchQueue.main.async {
                 self.newsTableView.reloadData()
             }
         }
-        if elementName == "NewsArticle" {
+        if elementName == TTStockMarketConstants.NewsArticeXMLTag {
             newsList.append(News(id: id, author: author, dateTime: dateTime, sourceName: sourceName, headline: headline, imageId: imageId))
         }
-        if elementName == "Headline" {
+        if elementName == TTStockMarketConstants.HeadlineXMLTag {
             headline = currentlyReadValue
             didEnterTag = false
-            currentlyReadValue = ""
+            currentlyReadValue = .empty
         }
-        if elementName == "ImageID" {
+        if elementName == TTStockMarketConstants.ImageIdXMLTag {
             imageId = Int(currentlyReadValue) ?? 0
             didEnterTag = false
-            currentlyReadValue = ""
+            currentlyReadValue = .empty
         }
     }
 }

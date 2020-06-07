@@ -51,7 +51,7 @@ class SymbolDetailsTableViewController: UITableViewController {
         dateFormater.dateFormat = dateInputFormat
         let date = dateFormater.date(from: dateToFormat)
         guard let formattedDate = date else {
-            return ""
+            return .empty
         }
         dateFormater.dateFormat = dateOutputFormat
         return dateFormater.string(from: formattedDate)

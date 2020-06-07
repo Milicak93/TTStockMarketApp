@@ -9,10 +9,7 @@
 import UIKit
 
 class SymbolDetailTableViewCell: UITableViewCell {
-    struct Constants {
-        static let MissingInfoPlaceholder = "-"
-    }
-    
+
     @IBOutlet weak var property: UILabel!
     @IBOutlet weak var propertyValue: UILabel!
 
@@ -23,7 +20,7 @@ class SymbolDetailTableViewCell: UITableViewCell {
     @discardableResult
     func populate(with propertyName: String, value: String) -> Self {
         property.text = propertyName
-        propertyValue.text = value.isEmpty ? Constants.MissingInfoPlaceholder : value
+        propertyValue.text = value//.isEmpty ? Constants.MissingInfoPlaceholder : value
         return self
     }
 

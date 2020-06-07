@@ -8,11 +8,7 @@
 
 import UIKit
 
-class SymbolCellCollectionViewCell: UICollectionViewCell {
-    // MARK: - Constants
-    struct Constants {
-        static let SymbolChangeLimit = Float(0.0)
-    }
+class SymbolCellCollectionViewCell: UICollectionViewCell, CustomizeFontColorProtocol {
     // MARK: - Properties
     
     @IBOutlet weak var symbolNameLbl: UILabel!
@@ -42,18 +38,8 @@ class SymbolCellCollectionViewCell: UICollectionViewCell {
         quoteLbl.text = data.quote.last
         highLbl.text = data.quote.high
         lowLbl.text = data.quote.low
+        contentView.layer.backgroundColor = fontColorBasedOnSymbolChange(change: data.quote.change).cgColor
         
-        let changeValue = Float(data.quote.change) ?? Constants.SymbolChangeLimit
-        switch changeValue {
-        case _ where changeValue < Constants.SymbolChangeLimit:
-            contentView.layer.backgroundColor = UIColor.red.cgColor
-        case _ where changeValue == Constants.SymbolChangeLimit:
-            contentView.layer.backgroundColor = UIColor.gray.cgColor
-        case _ where changeValue > Constants.SymbolChangeLimit:
-            contentView.layer.backgroundColor = UIColor.green.cgColor
-        default:
-            break
-        }
         return self
     }
 }

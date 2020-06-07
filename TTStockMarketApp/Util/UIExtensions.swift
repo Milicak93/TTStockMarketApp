@@ -23,3 +23,8 @@ extension UIImageView {
         }.resume()
     }
 }
+
+extension String {
+    static let empty = ""
+    static let missingInfoPlaceholder = "-"
+}

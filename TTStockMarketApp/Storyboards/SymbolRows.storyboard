@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DUj-Kz-pQS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Symbol Rows-->
+        <scene sceneID="KPm-d1-Eub">
+            <objects>
+                <navigationController id="DUj-Kz-pQS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Symbol Rows" image="rectangle.grid.1x2" catalog="system" id="Hxu-bV-Aix"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rXm-CT-LRi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SGZ-7l-O15" kind="relationship" relationship="rootViewController" id="ArB-WT-wgS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTd-rC-o3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1178" y="129"/>
+        </scene>
+        <!--Symbols Table Presentation View Controller-->
+        <scene sceneID="XrG-z4-hQ3">
+            <objects>
+                <viewController id="SGZ-7l-O15" customClass="SymbolsTablePresentationViewController" customModule="TTStockMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tbX-4u-u5K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eac-73-Xoc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="DUL-0g-tDx">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v2M-0A-pbW">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="80"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PsQ-kQ-VzE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkN-mt-17j" customClass="TTButton" customModule="TTStockMarketApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="132.5" height="40"/>
+                                                            <state key="normal" title="Default">
+                                                                <color key="titleColor" name="LabelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="defaultSortingButtonPressed:" destination="SGZ-7l-O15" eventType="touchUpInside" id="Qmg-Fh-9W4"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-ob-F5u" customClass="TTButton" customModule="TTStockMarketApp" customModuleProvider="target">
+                                                            <rect key="frame" x="132.5" y="0.0" width="133" height="40"/>
+                                                            <state key="normal" title="Ascending">
+                                                                <color key="titleColor" name="LabelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="ascendingSortingButtonPressed:" destination="SGZ-7l-O15" eventType="touchUpInside" id="6cF-UM-aTZ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYG-Xn-oUo" customClass="TTButton" customModule="TTStockMarketApp" customModuleProvider="target">
+                                                            <rect key="frame" x="265.5" y="0.0" width="132.5" height="40"/>
+                                                            <state key="normal" title="Descending">
+                                                                <color key="titleColor" name="LabelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="descendingSortingButtonPressed:" destination="SGZ-7l-O15" eventType="touchUpInside" id="m3k-CH-gMT"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uqe-Fb-Zbm">
+                                                    <rect key="frame" x="0.0" y="40" width="398" height="40"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-Fy-8D6" customClass="TTButton" customModule="TTStockMarketApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="132.5" height="40"/>
+                                                            <state key="normal" title="Change % / Last">
+                                                                <color key="titleColor" name="LabelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="changeLastFormatButtonPressed:" destination="SGZ-7l-O15" eventType="touchUpInside" id="P3c-Lp-pFz"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GZ-zM-zrb" customClass="TTButton" customModule="TTStockMarketApp" customModuleProvider="target">
+                                                            <rect key="frame" x="132.5" y="0.0" width="133" height="40"/>
+                                                            <state key="normal" title="Bid / Ask">
+                                                                <color key="titleColor" name="LabelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="bidAskFormatButtonPressed:" destination="SGZ-7l-O15" eventType="touchUpInside" id="pdz-Lh-2sE"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIj-RF-4gD" customClass="TTButton" customModule="TTStockMarketApp" customModuleProvider="target">
+                                                            <rect key="frame" x="265.5" y="0.0" width="132.5" height="40"/>
+                                                            <state key="normal" title="High / Low">
+                                                                <color key="titleColor" name="LabelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="highLowFormatButtonPressed:" destination="SGZ-7l-O15" eventType="touchUpInside" id="OsI-97-Sdk"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="v2M-0A-pbW" firstAttribute="leading" secondItem="DUL-0g-tDx" secondAttribute="leading" constant="8" id="25e-kh-CPS"/>
+                                        <constraint firstAttribute="trailing" secondItem="v2M-0A-pbW" secondAttribute="trailing" constant="8" id="7cJ-ln-IKF"/>
+                                        <constraint firstAttribute="bottom" secondItem="v2M-0A-pbW" secondAttribute="bottom" constant="16" id="eUk-W8-HLn"/>
+                                        <constraint firstItem="v2M-0A-pbW" firstAttribute="top" secondItem="DUL-0g-tDx" secondAttribute="top" id="pWv-Vy-2Ip"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SymbolTableViewCell" id="5nR-8g-mlY" customClass="SymbolTableViewCell" customModule="TTStockMarketApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="414" height="21"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nR-8g-mlY" id="33n-RS-8lb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-bT-N18">
+                                                    <rect key="frame" x="8" y="0.0" width="398" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="rjY-eo-T5Q">
+                                                            <rect key="frame" x="0.0" y="0.0" width="132.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <color key="textColor" name="LabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="83r-Gg-c96">
+                                                            <rect key="frame" x="132.5" y="0.0" width="133" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="LabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="gnT-Tc-jht">
+                                                            <rect key="frame" x="265.5" y="0.0" width="132.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="LabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="2lx-bT-N18" secondAttribute="bottom" id="Dzz-Mg-tnt"/>
+                                                <constraint firstItem="2lx-bT-N18" firstAttribute="top" secondItem="33n-RS-8lb" secondAttribute="top" id="Xg3-E5-faU"/>
+                                                <constraint firstItem="2lx-bT-N18" firstAttribute="leading" secondItem="33n-RS-8lb" secondAttribute="leading" constant="8" id="cUj-v0-xHm"/>
+                                                <constraint firstAttribute="trailing" secondItem="2lx-bT-N18" secondAttribute="trailing" constant="8" id="dbx-it-aUR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstPropertyLbl" destination="83r-Gg-c96" id="isJ-XV-hrB"/>
+                                            <outlet property="nameLbl" destination="rjY-eo-T5Q" id="WEf-I1-MWy"/>
+                                            <outlet property="seconPropertyLbl" destination="gnT-Tc-jht" id="hYa-dc-Flk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SGZ-7l-O15" id="fhg-GV-hu2"/>
+                                    <outlet property="delegate" destination="SGZ-7l-O15" id="xJA-g6-kvr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tug-Ki-cBm" firstAttribute="bottom" secondItem="eac-73-Xoc" secondAttribute="bottom" id="Lba-fM-h3n"/>
+                            <constraint firstItem="eac-73-Xoc" firstAttribute="leading" secondItem="tug-Ki-cBm" secondAttribute="leading" id="NLe-sP-XiF"/>
+                            <constraint firstItem="tug-Ki-cBm" firstAttribute="trailing" secondItem="eac-73-Xoc" secondAttribute="trailing" id="S87-3Q-hdq"/>
+                            <constraint firstItem="eac-73-Xoc" firstAttribute="top" secondItem="tug-Ki-cBm" secondAttribute="top" id="dcY-ln-gtR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tug-Ki-cBm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ydK-hg-ruO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="eac-73-Xoc" id="TUc-OM-JaE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYN-YS-5rd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52.173913043478265" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
+        <namedColor name="LabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -26,12 +26,18 @@
 		A64CE040248A964B0077A3C4 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64CE03D248A964A0077A3C4 /* News.storyboard */; };
 		A64CE041248A964B0077A3C4 /* SymbolList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64CE03E248A964B0077A3C4 /* SymbolList.storyboard */; };
 		A64CE044248A968D0077A3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64CE043248A968D0077A3C4 /* Main.storyboard */; };
+		A6636C5D248D8C6C00A082CD /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6636C5C248D8C6C00A082CD /* GeneralConstants.swift */; };
+		A6670358248D76DF00ED5E54 /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6670357248D76DF00ED5E54 /* TTButton.swift */; };
 		A6B77077248CF7AD0008275A /* SymbolDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77076248CF7AD0008275A /* SymbolDetailsTableViewController.swift */; };
 		A6B7707D248CFCC80008275A /* SymbolDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7707C248CFCC80008275A /* SymbolDetailTableViewCell.swift */; };
 		A6B7707F248D09140008275A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7707E248D09140008275A /* Util.swift */; };
 		A6B77082248D184F0008275A /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77081248D184F0008275A /* NewsDetailsViewController.swift */; };
 		A6B77084248D32BE0008275A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77083248D32BE0008275A /* NetworkManager.swift */; };
 		A6B77086248D41680008275A /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77085248D41680008275A /* PersistanceManager.swift */; };
+		A6B77088248D52E80008275A /* SymbolRows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6B77087248D52E80008275A /* SymbolRows.storyboard */; };
+		A6B7708A248D53780008275A /* SymbolsTablePresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B77089248D53780008275A /* SymbolsTablePresentationViewController.swift */; };
+		A6B7708C248D56F80008275A /* SymbolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7708B248D56F80008275A /* SymbolTableViewCell.swift */; };
+		A6B7708E248D5E410008275A /* BaseSymbolXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7708D248D5E410008275A /* BaseSymbolXMLParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,12 +62,18 @@
 		A64CE03D248A964A0077A3C4 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		A64CE03E248A964B0077A3C4 /* SymbolList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SymbolList.storyboard; sourceTree = "<group>"; };
 		A64CE043248A968D0077A3C4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A6636C5C248D8C6C00A082CD /* GeneralConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConstants.swift; sourceTree = "<group>"; };
+		A6670357248D76DF00ED5E54 /* TTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTButton.swift; sourceTree = "<group>"; };
 		A6B77076248CF7AD0008275A /* SymbolDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolDetailsTableViewController.swift; sourceTree = "<group>"; };
 		A6B7707C248CFCC80008275A /* SymbolDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A6B7707E248D09140008275A /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A6B77081248D184F0008275A /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsDetailsViewController.swift; path = TTStockMarketApp/Scenes/NewsDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		A6B77083248D32BE0008275A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A6B77085248D41680008275A /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		A6B77087248D52E80008275A /* SymbolRows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SymbolRows.storyboard; sourceTree = "<group>"; };
+		A6B77089248D53780008275A /* SymbolsTablePresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsTablePresentationViewController.swift; sourceTree = "<group>"; };
+		A6B7708B248D56F80008275A /* SymbolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTableViewCell.swift; sourceTree = "<group>"; };
+		A6B7708D248D5E410008275A /* BaseSymbolXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSymbolXMLParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,19 +92,20 @@
 			children = (
 				A6005263248BAFCE0029EE94 /* Symbol.swift */,
 				A62C1E0F248C01CC007300A9 /* News.swift */,
+				A6B7708D248D5E410008275A /* BaseSymbolXMLParser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A6005268248BDAE30029EE94 /* CustomViews */ = {
+		A6005268248BDAE30029EE94 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
 				A6005266248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift */,
 				A62C1E11248C02D9007300A9 /* NewsTableViewCell.swift */,
-				A62C1E17248C1A87007300A9 /* GradientView.swift */,
 				A6B7707C248CFCC80008275A /* SymbolDetailTableViewCell.swift */,
+				A6B7708B248D56F80008275A /* SymbolTableViewCell.swift */,
 			);
-			path = CustomViews;
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 		A64CE013248A95B70077A3C4 = {
@@ -119,7 +132,7 @@
 				A64CE028248A95B80077A3C4 /* Assets.xcassets */,
 				A64CE042248A964F0077A3C4 /* Storyboards */,
 				A64CE03B248A96330077A3C4 /* Scenes */,
-				A6005268248BDAE30029EE94 /* CustomViews */,
+				A6005268248BDAE30029EE94 /* Custom Cells */,
 				A6005265248BAFD60029EE94 /* Models */,
 				A6B77080248D09180008275A /* Util */,
 				A64CE02A248A95B80077A3C4 /* LaunchScreen.storyboard */,
@@ -140,6 +153,7 @@
 				A64CE033248A962A0077A3C4 /* NewsViewController.swift */,
 				A6005261248BABAB0029EE94 /* SymbolListCollectionViewController.swift */,
 				A6B77076248CF7AD0008275A /* SymbolDetailsTableViewController.swift */,
+				A6B77089248D53780008275A /* SymbolsTablePresentationViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 				A64CE03D248A964A0077A3C4 /* News.storyboard */,
 				A64CE03E248A964B0077A3C4 /* SymbolList.storyboard */,
 				A64CE043248A968D0077A3C4 /* Main.storyboard */,
+				A6B77087248D52E80008275A /* SymbolRows.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -158,8 +173,11 @@
 		A6B77080248D09180008275A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A62C1E17248C1A87007300A9 /* GradientView.swift */,
 				A62C1E15248C14AC007300A9 /* UIExtensions.swift */,
 				A6B7707E248D09140008275A /* Util.swift */,
+				A6670357248D76DF00ED5E54 /* TTButton.swift */,
+				A6636C5C248D8C6C00A082CD /* GeneralConstants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -227,6 +245,7 @@
 				A64CE02C248A95B80077A3C4 /* LaunchScreen.storyboard in Resources */,
 				A64CE029248A95B80077A3C4 /* Assets.xcassets in Resources */,
 				A64CE044248A968D0077A3C4 /* Main.storyboard in Resources */,
+				A6B77088248D52E80008275A /* SymbolRows.storyboard in Resources */,
 				A64CE040248A964B0077A3C4 /* News.storyboard in Resources */,
 				A64CE03F248A964B0077A3C4 /* Info.storyboard in Resources */,
 			);
@@ -240,22 +259,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64CE020248A95B70077A3C4 /* AppDelegate.swift in Sources */,
+				A6636C5D248D8C6C00A082CD /* GeneralConstants.swift in Sources */,
 				A64CE039248A962A0077A3C4 /* MainTabBarController.swift in Sources */,
 				A6B7707D248CFCC80008275A /* SymbolDetailTableViewCell.swift in Sources */,
 				A6B77086248D41680008275A /* PersistanceManager.swift in Sources */,
 				A62C1E18248C1A87007300A9 /* GradientView.swift in Sources */,
 				A62C1E12248C02D9007300A9 /* NewsTableViewCell.swift in Sources */,
 				A6005267248BDAD20029EE94 /* SymbolCellCollectionViewCell.swift in Sources */,
+				A6670358248D76DF00ED5E54 /* TTButton.swift in Sources */,
 				A62C1E10248C01CC007300A9 /* News.swift in Sources */,
+				A6B7708E248D5E410008275A /* BaseSymbolXMLParser.swift in Sources */,
 				A6B7707F248D09140008275A /* Util.swift in Sources */,
 				A62C1E16248C14AC007300A9 /* UIExtensions.swift in Sources */,
 				A6005262248BABAB0029EE94 /* SymbolListCollectionViewController.swift in Sources */,
 				A6B77084248D32BE0008275A /* NetworkManager.swift in Sources */,
 				A6B77077248CF7AD0008275A /* SymbolDetailsTableViewController.swift in Sources */,
+				A6B7708C248D56F80008275A /* SymbolTableViewCell.swift in Sources */,
 				A64CE022248A95B70077A3C4 /* SceneDelegate.swift in Sources */,
 				A6B77082248D184F0008275A /* NewsDetailsViewController.swift in Sources */,
 				A6005264248BAFCE0029EE94 /* Symbol.swift in Sources */,
 				A64CE037248A962A0077A3C4 /* NewsViewController.swift in Sources */,
+				A6B7708A248D53780008275A /* SymbolsTablePresentationViewController.swift in Sources */,
 				A64CE038248A962A0077A3C4 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
