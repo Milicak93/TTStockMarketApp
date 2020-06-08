@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SymbolTableViewCell: UITableViewCell, CustomizeFontColorProtocol {
+class SymbolTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
     @IBOutlet weak var nameLbl: UILabel!
@@ -25,7 +25,7 @@ class SymbolTableViewCell: UITableViewCell, CustomizeFontColorProtocol {
         firstPropertyLbl.text = firstProperty
         seconPropertyLbl.text = secondProperty
         if isShowingChangeValue {
-            firstPropertyLbl.textColor = fontColorBasedOnSymbolChange(change: firstProperty)
+            firstPropertyLbl.textColor = FontColorUtility.fontColorBasedOnSymbolChange(change: firstProperty)
         } else {
             firstPropertyLbl.textColor = TTStockMarketConstants.LabelColor
         }
