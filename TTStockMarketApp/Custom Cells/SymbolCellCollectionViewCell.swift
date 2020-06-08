@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SymbolCellCollectionViewCell: UICollectionViewCell, CustomizeFontColorProtocol {
+class SymbolCellCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
     
     @IBOutlet weak var symbolNameLbl: UILabel!
@@ -38,7 +38,7 @@ class SymbolCellCollectionViewCell: UICollectionViewCell, CustomizeFontColorProt
         quoteLbl.text = data.quote.last
         highLbl.text = data.quote.high
         lowLbl.text = data.quote.low
-        contentView.layer.backgroundColor = fontColorBasedOnSymbolChange(change: data.quote.change).cgColor
+        contentView.layer.backgroundColor = FontColorUtility.fontColorBasedOnSymbolChange(change: data.quote.change).cgColor
         
         return self
     }

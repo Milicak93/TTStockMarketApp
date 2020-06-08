@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol CustomizeFontColorProtocol {
-    func fontColorBasedOnSymbolChange(change value: String) -> UIColor
-}
+class FontColorUtility {
 
-extension CustomizeFontColorProtocol {
-
-    func fontColorBasedOnSymbolChange(change value: String) -> UIColor {
+    static func fontColorBasedOnSymbolChange(change value: String) -> UIColor {
         let changeValue = Float(value) ?? TTStockMarketConstants.SymbolChangeLimit
         switch changeValue {
         case _ where changeValue < TTStockMarketConstants.SymbolChangeLimit:
